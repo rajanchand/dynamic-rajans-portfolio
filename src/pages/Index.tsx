@@ -5,8 +5,11 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import Search from "@/components/Search";
 import { cn } from "@/lib/utils";
 
@@ -30,27 +33,20 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background antialiased">
+    <div className="min-h-screen bg-background dark:bg-gray-900 antialiased">
       <Navbar />
       
       <main>
         <Hero />
+        <Experience />
         <Skills />
         <Education />
+        <Projects />
         <About />
         <Contact />
       </main>
       
-      <footer className="py-8 bg-techdarker text-white">
-        <div className="container mx-auto px-6 md:px-12 text-center">
-          <p className="mb-2">
-            &copy; {new Date().getFullYear()} Rajan Prakash Chand. All rights reserved.
-          </p>
-          <p className="text-sm text-gray-400">
-            Designed and built with precision and care
-          </p>
-        </div>
-      </footer>
+      <Footer />
       
       <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-40">
         <Search />
@@ -58,7 +54,7 @@ const Index: React.FC = () => {
         <button
           onClick={scrollToTop}
           className={cn(
-            "p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-all flex items-center justify-center text-techdarker",
+            "p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all flex items-center justify-center text-techdarker dark:text-white",
             showBackToTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
           )}
           aria-label="Back to top"

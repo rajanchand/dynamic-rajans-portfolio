@@ -72,39 +72,39 @@ const EducationCard: React.FC<{ education: EducationItem; index: number }> = ({ 
     <AnimatedSection 
       animation="slide-up" 
       delay={0.1 * index}
-      className="glass-card transition-all duration-300 hover:shadow-lg overflow-hidden"
+      className="glass-card transition-all duration-300 hover:shadow-lg dark:bg-gray-800/50 dark:border-gray-700 overflow-hidden"
     >
       <div className="flex flex-col lg:flex-row">
         <div className="p-6 lg:p-8 flex-1">
           <div className="flex flex-wrap items-center gap-3 mb-3">
-            <div className="px-3 py-1 bg-techaccent/10 rounded-full text-xs font-medium text-techaccent flex items-center gap-1.5">
+            <div className="px-3 py-1 bg-techaccent/10 dark:bg-techaccent/20 rounded-full text-xs font-medium text-techaccent flex items-center gap-1.5">
               <GraduationCap size={14} />
               {education.degree}
             </div>
             
-            <div className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-700 flex items-center gap-1.5">
+            <div className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium text-gray-700 dark:text-gray-300 flex items-center gap-1.5">
               <Calendar size={14} />
               {education.period}
             </div>
           </div>
           
           <div className="mb-4">
-            <h3 className="text-xl font-medium mb-1">{education.institution}</h3>
-            <div className="flex items-center text-sm text-muted-foreground">
+            <h3 className="text-xl font-medium mb-1 text-techdarker dark:text-white">{education.institution}</h3>
+            <div className="flex items-center text-sm text-muted-foreground dark:text-gray-400">
               <MapPin size={14} className="mr-1" />
               {education.location}
             </div>
           </div>
           
-          <p className="text-muted-foreground mb-4">{education.description}</p>
+          <p className="text-muted-foreground dark:text-gray-300 mb-4">{education.description}</p>
           
           {education.achievements && education.achievements.length > 0 && (
             <div>
-              <h4 className="text-sm font-medium mb-2 flex items-center gap-1.5">
+              <h4 className="text-sm font-medium mb-2 flex items-center gap-1.5 text-techdarker dark:text-gray-200">
                 <Award size={16} className="text-techaccent" />
                 Achievements
               </h4>
-              <ul className="text-sm space-y-1 text-muted-foreground">
+              <ul className="text-sm space-y-1 text-muted-foreground dark:text-gray-300">
                 {education.achievements.map((achievement, i) => (
                   <li key={i} className="flex items-start">
                     <span className="text-techaccent mr-2 mt-1">•</span>
@@ -118,8 +118,8 @@ const EducationCard: React.FC<{ education: EducationItem; index: number }> = ({ 
         
         <div 
           className={cn(
-            "hidden lg:block w-1 bg-gradient-to-b from-techaccent/50 to-techaccent/5",
-            index === 0 ? "from-techaccent to-techaccent/50" : ""
+            "hidden lg:block w-1 bg-gradient-to-b from-techaccent/50 to-techaccent/5 dark:from-techaccent/70 dark:to-techaccent/10",
+            index === 0 ? "from-techaccent to-techaccent/50 dark:from-techaccent dark:to-techaccent/50" : ""
           )}
         ></div>
       </div>
@@ -129,12 +129,12 @@ const EducationCard: React.FC<{ education: EducationItem; index: number }> = ({ 
 
 const Education: React.FC<EducationProps> = ({ className }) => {
   return (
-    <section id="education" className={cn("py-20 md:py-32", className)}>
+    <section id="education" className={cn("py-20 md:py-32 dark:bg-gray-900", className)}>
       <div className="container mx-auto px-6 md:px-12">
         <div className="section-heading">
           <AnimatedSection animation="fade-in">
-            <div className="section-subtitle">MY JOURNEY</div>
-            <h2 className="section-title">Education & Qualifications</h2>
+            <div className="section-subtitle dark:text-gray-400">MY JOURNEY</div>
+            <h2 className="section-title dark:text-white">Education & Qualifications</h2>
             <div className="section-line"></div>
           </AnimatedSection>
         </div>

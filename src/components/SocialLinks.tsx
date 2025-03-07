@@ -14,25 +14,25 @@ const socialLinks = [
     name: "GitHub",
     url: "https://github.com/rajanprakashchand",
     icon: Github,
-    hoverClass: "hover:text-gray-800",
+    hoverClass: "hover:text-gray-800 dark:hover:text-white",
   },
   {
     name: "LinkedIn",
     url: "https://linkedin.com/in/rajanprakashchand",
     icon: Linkedin,
-    hoverClass: "hover:text-blue-700",
+    hoverClass: "hover:text-blue-700 dark:hover:text-blue-400",
   },
   {
     name: "Instagram",
     url: "https://instagram.com/rajanprakashchand",
     icon: Instagram,
-    hoverClass: "hover:text-pink-600",
+    hoverClass: "hover:text-pink-600 dark:hover:text-pink-400",
   },
   {
     name: "Facebook",
     url: "https://facebook.com/rajanprakashchand",
     icon: Facebook,
-    hoverClass: "hover:text-blue-600",
+    hoverClass: "hover:text-blue-600 dark:hover:text-blue-400",
   },
 ];
 
@@ -56,7 +56,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "transition-all duration-300 text-muted-foreground",
+            "transition-all duration-300 text-muted-foreground dark:text-gray-400",
             link.hoverClass,
             "hover:scale-110"
           )}

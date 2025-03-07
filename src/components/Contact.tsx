@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { cn } from "@/lib/utils";
+import SocialLinks from "./SocialLinks";
 
 interface ContactProps {
   className?: string;
@@ -139,21 +140,21 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
   };
   
   return (
-    <section id="contact" className={cn("py-20 md:py-32", className)}>
+    <section id="contact" className={cn("py-20 md:py-32 dark:bg-gray-900", className)}>
       <div className="container mx-auto px-6 md:px-12">
         <div className="section-heading">
           <AnimatedSection animation="fade-in">
-            <div className="section-subtitle">GET IN TOUCH</div>
-            <h2 className="section-title">Contact Me</h2>
+            <div className="section-subtitle dark:text-gray-400">GET IN TOUCH</div>
+            <h2 className="section-title dark:text-white">Contact Me</h2>
             <div className="section-line"></div>
           </AnimatedSection>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <AnimatedSection animation="slide-up" className="lg:col-span-1">
-            <div className="glass-card p-6 md:p-8 h-full">
-              <h3 className="text-xl font-medium mb-6">Let's talk about everything!</h3>
-              <p className="text-muted-foreground mb-8">
+            <div className="glass-card p-6 md:p-8 h-full dark:bg-gray-800/50 dark:border-gray-700">
+              <h3 className="text-xl font-medium mb-6 text-techdarker dark:text-white">Let's talk about everything!</h3>
+              <p className="text-muted-foreground dark:text-gray-300 mb-8">
                 Feel free to reach out if you have any questions, project inquiries, or just want to say hello. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
               
@@ -166,27 +167,32 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                     rel="noopener noreferrer"
                     className="flex items-start gap-4 hover:text-techaccent transition-colors"
                   >
-                    <div className="p-3 bg-techaccent/10 rounded-xl text-techaccent mt-1">
+                    <div className="p-3 bg-techaccent/10 dark:bg-techaccent/20 rounded-xl text-techaccent mt-1">
                       <info.icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-medium mb-1">{info.title}</h4>
-                      <p className="text-muted-foreground">{info.content}</p>
+                      <h4 className="font-medium mb-1 text-techdarker dark:text-white">{info.title}</h4>
+                      <p className="text-muted-foreground dark:text-gray-300">{info.content}</p>
                     </div>
                   </a>
                 ))}
+              </div>
+              
+              <div className="mt-8">
+                <h4 className="font-medium mb-3 text-techdarker dark:text-white">Follow me on</h4>
+                <SocialLinks iconSize={24} />
               </div>
             </div>
           </AnimatedSection>
           
           <AnimatedSection animation="slide-up" delay={0.2} className="lg:col-span-2">
-            <div className="glass-card p-6 md:p-8">
-              <h3 className="text-xl font-medium mb-6">Send me a message</h3>
+            <div className="glass-card p-6 md:p-8 dark:bg-gray-800/50 dark:border-gray-700">
+              <h3 className="text-xl font-medium mb-6 text-techdarker dark:text-white">Send me a message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1">
+                    <label htmlFor="name" className="block text-sm font-medium mb-1 text-techdarker dark:text-gray-300">
                       Name
                     </label>
                     <input
@@ -196,15 +202,15 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                       value={formData.name}
                       onChange={handleChange}
                       className={cn(
-                        "w-full px-4 py-3 rounded-lg border bg-white/50 outline-none focus:ring-2 transition-all",
+                        "w-full px-4 py-3 rounded-lg border bg-white/50 dark:bg-gray-800/50 outline-none focus:ring-2 transition-all dark:text-white dark:placeholder-gray-400",
                         errors.name 
-                          ? "border-red-300 focus:ring-red-100"
-                          : "border-gray-200 focus:border-techaccent focus:ring-techaccent/20"
+                          ? "border-red-300 dark:border-red-700 focus:ring-red-100 dark:focus:ring-red-900"
+                          : "border-gray-200 dark:border-gray-700 focus:border-techaccent focus:ring-techaccent/20 dark:focus:ring-techaccent/10"
                       )}
                       placeholder="Your name"
                     />
                     {errors.name && (
-                      <p className="text-red-500 text-xs mt-1 flex items-center gap-1">
+                      <p className="text-red-500 dark:text-red-400 text-xs mt-1 flex items-center gap-1">
                         <AlertCircle size={12} />
                         {errors.name}
                       </p>
@@ -212,7 +218,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium mb-1 text-techdarker dark:text-gray-300">
                       Email
                     </label>
                     <input
@@ -222,15 +228,15 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                       value={formData.email}
                       onChange={handleChange}
                       className={cn(
-                        "w-full px-4 py-3 rounded-lg border bg-white/50 outline-none focus:ring-2 transition-all",
+                        "w-full px-4 py-3 rounded-lg border bg-white/50 dark:bg-gray-800/50 outline-none focus:ring-2 transition-all dark:text-white dark:placeholder-gray-400",
                         errors.email 
-                          ? "border-red-300 focus:ring-red-100"
-                          : "border-gray-200 focus:border-techaccent focus:ring-techaccent/20"
+                          ? "border-red-300 dark:border-red-700 focus:ring-red-100 dark:focus:ring-red-900"
+                          : "border-gray-200 dark:border-gray-700 focus:border-techaccent focus:ring-techaccent/20 dark:focus:ring-techaccent/10"
                       )}
                       placeholder="Your email"
                     />
                     {errors.email && (
-                      <p className="text-red-500 text-xs mt-1 flex items-center gap-1">
+                      <p className="text-red-500 dark:text-red-400 text-xs mt-1 flex items-center gap-1">
                         <AlertCircle size={12} />
                         {errors.email}
                       </p>
@@ -239,7 +245,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-1">
+                  <label htmlFor="subject" className="block text-sm font-medium mb-1 text-techdarker dark:text-gray-300">
                     Subject
                   </label>
                   <input
@@ -249,15 +255,15 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                     value={formData.subject}
                     onChange={handleChange}
                     className={cn(
-                      "w-full px-4 py-3 rounded-lg border bg-white/50 outline-none focus:ring-2 transition-all",
+                      "w-full px-4 py-3 rounded-lg border bg-white/50 dark:bg-gray-800/50 outline-none focus:ring-2 transition-all dark:text-white dark:placeholder-gray-400",
                       errors.subject 
-                        ? "border-red-300 focus:ring-red-100"
-                        : "border-gray-200 focus:border-techaccent focus:ring-techaccent/20"
+                        ? "border-red-300 dark:border-red-700 focus:ring-red-100 dark:focus:ring-red-900"
+                        : "border-gray-200 dark:border-gray-700 focus:border-techaccent focus:ring-techaccent/20 dark:focus:ring-techaccent/10"
                     )}
                     placeholder="Subject of your message"
                   />
                   {errors.subject && (
-                    <p className="text-red-500 text-xs mt-1 flex items-center gap-1">
+                    <p className="text-red-500 dark:text-red-400 text-xs mt-1 flex items-center gap-1">
                       <AlertCircle size={12} />
                       {errors.subject}
                     </p>
@@ -265,7 +271,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-techdarker dark:text-gray-300">
                     Message
                   </label>
                   <textarea
@@ -275,15 +281,15 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                     value={formData.message}
                     onChange={handleChange}
                     className={cn(
-                      "w-full px-4 py-3 rounded-lg border bg-white/50 outline-none focus:ring-2 transition-all resize-none",
+                      "w-full px-4 py-3 rounded-lg border bg-white/50 dark:bg-gray-800/50 outline-none focus:ring-2 transition-all resize-none dark:text-white dark:placeholder-gray-400",
                       errors.message 
-                        ? "border-red-300 focus:ring-red-100"
-                        : "border-gray-200 focus:border-techaccent focus:ring-techaccent/20"
+                        ? "border-red-300 dark:border-red-700 focus:ring-red-100 dark:focus:ring-red-900"
+                        : "border-gray-200 dark:border-gray-700 focus:border-techaccent focus:ring-techaccent/20 dark:focus:ring-techaccent/10"
                     )}
                     placeholder="Your message"
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-xs mt-1 flex items-center gap-1">
+                    <p className="text-red-500 dark:text-red-400 text-xs mt-1 flex items-center gap-1">
                       <AlertCircle size={12} />
                       {errors.message}
                     </p>
@@ -292,14 +298,14 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                 
                 <div className="flex items-center justify-between pt-2">
                   {submitStatus === "success" && (
-                    <p className="text-green-600 flex items-center gap-1 text-sm">
+                    <p className="text-green-600 dark:text-green-400 flex items-center gap-1 text-sm">
                       <CheckCircle size={16} />
                       Message sent successfully!
                     </p>
                   )}
                   
                   {submitStatus === "error" && (
-                    <p className="text-red-500 flex items-center gap-1 text-sm">
+                    <p className="text-red-500 dark:text-red-400 flex items-center gap-1 text-sm">
                       <AlertCircle size={16} />
                       Failed to send message. Please try again.
                     </p>
@@ -332,6 +338,24 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                   </button>
                 </div>
               </form>
+            </div>
+          </AnimatedSection>
+        </div>
+        
+        <div className="mt-12">
+          <AnimatedSection animation="fade-in" delay={0.3}>
+            <div className="glass-card overflow-hidden rounded-2xl h-[400px] relative dark:bg-gray-800/50 dark:border-gray-700">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.95106322413!2d76.76356549970902!3d28.644287357859093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1682506428455!5m2!1sen!2sus" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Rajan Prakash Chand Location"
+                className="grayscale hover:grayscale-0 transition-all duration-500"
+              ></iframe>
             </div>
           </AnimatedSection>
         </div>
