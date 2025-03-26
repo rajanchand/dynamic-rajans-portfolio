@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
     
     // Preload the profile image
     const img = new Image();
-    img.src = "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952";
+    img.src = "rajan.jpg";
     img.onload = () => setImageLoaded(true);
   }, []);
 
@@ -42,7 +42,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             )}
           >
             <div className="inline-block mb-3 px-3 py-1 bg-techaccent/10 dark:bg-techaccent/20 rounded-full text-xs font-medium text-techaccent tracking-wider">
-              SOFTWARE ENGINEER
+              Network ENGINEER
             </div>
             
             <h1 className="mb-4 text-techdarker dark:text-white">
@@ -53,9 +53,9 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             </h1>
             
             <p className="text-lg md:text-xl mb-8 max-w-2xl text-muted-foreground dark:text-gray-300">
-              A software engineer driven by curiosity and desire to push the boundaries of what is possible with technology. 
-              With over four years of experience working in the IT industry, I have gained a deep understanding of software 
-              design and development principles, as well as expertise in various programming languages and frameworks.
+              A Network engineer driven by curiosity and desire to push the boundaries of what is possible with technology. 
+              With over Five years of experience working in the ISP industry, I have gained a deep understanding of Networking 
+              Design and Deployment as well as expertise in various Skills
             </p>
             
             <p className="text-lg md:text-xl mb-8 max-w-2xl text-muted-foreground dark:text-gray-300">
@@ -64,7 +64,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             </p>
             
             <p className="text-lg md:text-xl mb-8 max-w-2xl text-muted-foreground dark:text-gray-300">
-              Feel free to read, comment and share. 🙂 Enjoy reading 📖 !
+              Feel free to read, comment, and share. 🙂 Enjoy reading 📖 !
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
