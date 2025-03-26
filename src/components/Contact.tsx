@@ -39,20 +39,20 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
     {
       icon: Mail,
       title: "Email",
-      content: "rajan.prakash@example.com",
-      link: "mailto:rajan.prakash@example.com",
+      content: "rajanchand48@gmail.com",
+      link: "mailto:rajanchand48@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 98765 43210",
-      link: "tel:+919876543210",
+      content: "+44 7570731478",
+      link: "tel:++44 7570731478",
     },
     {
       icon: MapPin,
       title: "Location",
-      content: "New Delhi, India",
-      link: "https://maps.google.com/?q=New+Delhi,India",
+      content: "Glasgow Scotland",
+      link: "<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4479.097449536804!2d-4.266346600000031!3d55.85314550000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1743033124964!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>",
     },
   ];
   
