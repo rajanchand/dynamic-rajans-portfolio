@@ -129,7 +129,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
             </div>
           </AnimatedSection>
           
-        <!--  <AnimatedSection animation="slide-up" delay={0.2}>
+         <AnimatedSection animation="slide-up" delay={0.2}>
             <div className="glass-card p-6 md:p-8 h-full dark:bg-gray-800/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-techaccent/10 dark:bg-techaccent/20 rounded-xl text-techaccent">
@@ -192,7 +192,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground dark:text-gray-400">{stat.label}</div>
-            </AnimatedSection>  -->
+            </AnimatedSection> 
           ))}
         </div>
       </div>
