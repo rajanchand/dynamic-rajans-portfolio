@@ -19,15 +19,14 @@ const About: React.FC<AboutProps> = ({ className }) => {
   const personalInfo = [
     { label: "Name", value: "Rajan Prakash Chand" },
     { label: "Age", value: "28 Years" },
-    { label: "Nationality", value: "Indian" },
-    { label: "Languages", value: "English, Hindi" },
-    { label: "Address", value: "New Delhi, India" },
-    { label: "Freelance", value: "Available" },
+    { label: "Nationality", value: "Nepali" },
+    { label: "Languages", value: "English, Hindi,Nepali" },
+    { label: "Address", value: "Glasgow, Scotland" },
   ];
 
   const contactInfo = [
-    { label: "Email", value: "rajan.prakash@example.com", icon: Mail, href: "mailto:rajan.prakash@example.com" },
-    { label: "Phone", value: "+91 98765 43210", icon: Phone, href: "tel:+919876543210" },
+    { label: "Email", value: "rajan.prakash@example.com", icon: Mail, href: "mailto:rajanchand48@gmail.com" },
+    { label: "Phone", value: "+91 98765 43210", icon: Phone, href: "tel:+44 07570731478" },
   ];
 
   return (
@@ -130,7 +129,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
             </div>
           </AnimatedSection>
           
-          <AnimatedSection animation="slide-up" delay={0.2}>
+        <!--  <AnimatedSection animation="slide-up" delay={0.2}>
             <div className="glass-card p-6 md:p-8 h-full dark:bg-gray-800/50 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-techaccent/10 dark:bg-techaccent/20 rounded-xl text-techaccent">
@@ -193,7 +192,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground dark:text-gray-400">{stat.label}</div>
-            </AnimatedSection>
+            </AnimatedSection>  -->
           ))}
         </div>
       </div>
