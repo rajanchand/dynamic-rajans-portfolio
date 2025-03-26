@@ -1,6 +1,6 @@
 
 import React from "react";
-import { CodeIcon, Database, Globe, Layout, Laptop, Server, Terminal, Workflow } from "lucide-react";
+import { Headphones, Network, Server, Users, ShieldCheck, MessageCircle, Mail } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { cn } from "@/lib/utils";
 
@@ -13,52 +13,46 @@ interface Skill {
 
 const skills: Skill[] = [
   {
-    name: "Frontend Development",
-    icon: ({ className }) => <Layout className={className} />,
-    description: "Creating responsive, interactive UIs with modern frameworks",
+    name: "Customer Support",
+    icon: ({ className }) => <Headphones className={className} />,
+    description: "Providing exceptional customer assistance and resolving inquiries efficiently",
+    proficiency: 92,
+  },
+  {
+    name: "Technical Analysis",
+    icon: ({ className }) => <ShieldCheck className={className} />,
+    description: "Analyzing technical requirements and providing optimal solutions",
+    proficiency: 88,
+  },
+  {
+    name: "Technical Support",
+    icon: ({ className }) => <Server className={className} />,
+    description: "Troubleshooting and resolving complex technical issues",
     proficiency: 90,
   },
   {
-    name: "Backend Development",
-    icon: ({ className }) => <Server className={className} />,
-    description: "Building robust API endpoints and server-side applications",
-    proficiency: 85,
-  },
-  {
-    name: "Database Management",
-    icon: ({ className }) => <Database className={className} />,
-    description: "Designing and optimizing database structures",
-    proficiency: 80,
-  },
-  {
-    name: "UI/UX Design",
-    icon: ({ className }) => <Laptop className={className} />,
-    description: "Creating intuitive and appealing interfaces",
-    proficiency: 75,
+    name: "Customer Handling",
+    icon: ({ className }) => <Users className={className} />,
+    description: "Managing client relationships and ensuring high satisfaction levels",
+    proficiency: 94,
   },
   {
     name: "DevOps",
-    icon: ({ className }) => <Workflow className={className} />,
-    description: "Setting up CI/CD pipelines and cloud infrastructure",
-    proficiency: 70,
+    icon: ({ className }) => <Network className={className} />,
+    description: "Implementing CI/CD pipelines and managing infrastructure",
+    proficiency: 82,
   },
   {
-    name: "Web Security",
-    icon: ({ className }) => <Globe className={className} />,
-    description: "Implementing secure authentication and data protection",
-    proficiency: 75,
-  },
-  {
-    name: "Programming Languages",
-    icon: ({ className }) => <CodeIcon className={className} />,
-    description: "JavaScript, Python, Java, C++, PHP",
+    name: "Networking",
+    icon: ({ className }) => <Server className={className} />,
+    description: "Designing and maintaining network infrastructure and security",
     proficiency: 85,
   },
   {
-    name: "Command Line",
-    icon: ({ className }) => <Terminal className={className} />,
-    description: "Proficient with bash, zsh, and PowerShell",
-    proficiency: 80,
+    name: "ISP Management",
+    icon: ({ className }) => <MessageCircle className={className} />,
+    description: "Providing internet service solutions and managing connectivity",
+    proficiency: 88,
   },
 ];
 
