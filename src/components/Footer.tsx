@@ -48,7 +48,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
             </p>
             <SocialLinks iconSize={22} className="mb-5" />
             <div className="text-sm text-gray-400 dark:text-gray-500">
-              New Delhi, India
+              Glasgow,Uk
             </div>
           </div>
           
