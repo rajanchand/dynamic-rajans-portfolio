@@ -20,7 +20,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
     { label: "Name", value: "Rajan Prakash Chand" },
     { label: "Age", value: "28 Years" },
     { label: "Nationality", value: "Nepali" },
-    { label: "Languages", value: "English, Hindi,Nepali" },
+    { label: "Languages", value: "English, Hindi, Nepali" },
     { label: "Address", value: "Glasgow, Scotland" },
   ];
 
@@ -51,19 +51,17 @@ const About: React.FC<AboutProps> = ({ className }) => {
               </div>
               
               <p className="text-muted-foreground dark:text-gray-300 mb-6">
-                A passionate software engineer with over 5 years of experience in creating elegant solutions to complex problems.
-                I specialize in full-stack development, with a focus on building scalable web applications that deliver exceptional
-                user experiences.
+                I am Rajan Prakash Chand, a Nepalese national living in Glasgow, Scotland. I'm pursuing a Master's degree in Information Technology, with a focus on networking and mesh configurations.
+
+
               </p>
               
               <p className="text-muted-foreground dark:text-gray-300 mb-6">
-                I am a strong advocate for clean code principles and enjoy working in collaborative environments where innovation is valued.
-                My technical expertise spans from frontend frameworks like React and Vue.js to backend technologies like Node.js and Python.
+                Professionally, I work as a Technical/Customer Supervisor at Dish Media Network. In addition, I'm learning DevOps through Techaxis 
               </p>
               
               <p className="text-muted-foreground dark:text-gray-300 mb-6">
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring
-                aspiring developers. I believe in continuous learning and staying updated with the latest industry trends.
+                I believe in continuous learning and staying updated with the latest industry trends.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-6">
@@ -114,7 +112,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {[
-                  "Customer Support", "Project Lead", "Networking", "DevOps,", "Technical Support,", 
+                  "Customer Support", "Project Lead", "Networking", "DevOps,", "Technical Support", 
                 ].map((skill) => (
                   <div 
                     key={skill}
