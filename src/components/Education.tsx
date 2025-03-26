@@ -15,10 +15,10 @@ interface EducationItem {
 
 const educationItems: EducationItem[] = [
   {
-    degree: "Master of Computer Science",
-    institution: "Stanford University",
-    location: "Stanford, CA",
-    period: "2018 - 2020",
+    degree: "Master of Information Technology",
+    institution: "University of the West of the Scotland",
+    location: "Paisley, Scotland",
+    period: "2025 - 2026",
     description: "Specialized in Artificial Intelligence and Machine Learning with focus on neural networks and computer vision applications.",
     achievements: [
       "Published research paper on efficient neural network architectures",
