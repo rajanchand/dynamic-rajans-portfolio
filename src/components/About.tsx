@@ -25,8 +25,8 @@ const About: React.FC<AboutProps> = ({ className }) => {
   ];
 
   const contactInfo = [
-    { label: "Email", value: "rajan.prakash@example.com", icon: Mail, href: "mailto:rajanchand48@gmail.com" },
-    { label: "Phone", value: "+91 98765 43210", icon: Phone, href: "tel:+44 07570731478" },
+    { label: "Email", value: "rajanchand48@gmail.com", icon: Mail, href: "mailto:rajanchand48@gmail.com" },
+    { label: "Phone", value: "+44 07570731478", icon: Phone, href: "tel:+44 07570731478" },
   ];
 
   return (
