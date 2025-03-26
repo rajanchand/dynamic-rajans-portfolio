@@ -114,8 +114,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {[
-                  "JavaScript", "TypeScript", "React", "Node.js", "Python", 
-                  "Java", "SQL", "MongoDB", "AWS", "Docker", "Git", "CI/CD"
+                  "Customer Support", "Project Lead", "Networking", "DevOps,", "Technical Support,", 
                 ].map((skill) => (
                   <div 
                     key={skill}
