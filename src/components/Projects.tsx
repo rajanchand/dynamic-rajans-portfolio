@@ -3,6 +3,7 @@ import React from "react";
 import { ExternalLink, Github, Globe, Layers } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { cn } from "@/lib/utils";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface ProjectItem {
   title: string;
@@ -11,32 +12,45 @@ interface ProjectItem {
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
+  featured?: boolean;
 }
 
 const projects: ProjectItem[] = [
   {
-    title: "E-commerce Platform",
-    description: "A fully functional e-commerce platform with payment processing, inventory management, and user profiles.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "https://ecommerce-demo.example.com",
-    githubUrl: "https://github.com/rajanprakashchand/ecommerce-platform"
+    title: "Networking Infrastructure Setup",
+    description: "Designed and implemented enterprise-level networking infrastructure with high availability and security measures for a large organization.",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    tags: ["Networking", "Security", "Infrastructure", "Cisco"],
+    liveUrl: "https://network-demo.example.com",
+    githubUrl: "https://github.com/rajanprakashchand/network-project",
+    featured: true
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, commenting, and file attachments.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    tags: ["Vue.js", "Firebase", "Tailwind CSS"],
-    liveUrl: "https://taskmanager-demo.example.com",
-    githubUrl: "https://github.com/rajanprakashchand/taskmanager"
+    title: "DevOps Automation Pipeline",
+    description: "Created a comprehensive CI/CD pipeline for automating software delivery with integrated testing, security scanning, and deployment.",
+    image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    tags: ["DevOps", "CI/CD", "Docker", "Kubernetes"],
+    liveUrl: "https://devops-demo.example.com",
+    githubUrl: "https://github.com/rajanprakashchand/devops-pipeline",
+    featured: true
   },
   {
-    title: "AI Content Generator",
-    description: "An application that uses AI to generate content for blogs, social media, and marketing materials.",
-    image: "https://images.unsplash.com/photo-1677442135136-20525f492c9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
-    tags: ["Python", "Flask", "OpenAI API", "React"],
-    liveUrl: "https://ai-content.example.com",
-    githubUrl: "https://github.com/rajanprakashchand/ai-content-generator"
+    title: "Customer Support Portal",
+    description: "Developed a centralized customer support system with ticket tracking, knowledge base, and AI-powered recommendations.",
+    image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    tags: ["Customer Support", "React", "Node.js", "AI"],
+    liveUrl: "https://support-portal.example.com",
+    githubUrl: "https://github.com/rajanprakashchand/support-portal",
+    featured: true
+  },
+  {
+    title: "ISP Management System",
+    description: "Built a comprehensive ISP management platform for bandwidth monitoring, client management, and service delivery.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    tags: ["ISP", "Network Management", "Python", "React"],
+    liveUrl: "https://isp-manager.example.com",
+    githubUrl: "https://github.com/rajanprakashchand/isp-management",
+    featured: true
   },
 ];
 
@@ -106,6 +120,8 @@ const ProjectCard: React.FC<{ project: ProjectItem; index: number }> = ({ projec
 };
 
 const Projects: React.FC<ProjectsProps> = ({ className }) => {
+  const featuredProjects = projects.filter(project => project.featured);
+  
   return (
     <section id="projects" className={cn("py-20 md:py-32 bg-techgray dark:bg-gray-900", className)}>
       <div className="container mx-auto px-6 md:px-12">
@@ -117,9 +133,15 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
           </AnimatedSection>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+          {featuredProjects.slice(0, 2).map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
+          ))}
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {featuredProjects.slice(2).map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index + 2} />
           ))}
         </div>
         
