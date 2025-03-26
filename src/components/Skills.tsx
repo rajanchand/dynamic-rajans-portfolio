@@ -12,19 +12,14 @@ interface Skill {
 
 const skills: Skill[] = [
   {
+    name: "DevOps",
+    icon: ({ className }) => <Network className={className} />,
+    description: "Implementing CI/CD pipelines and managing infrastructure",
+  },
+  {
     name: "Customer Support",
     icon: ({ className }) => <Headphones className={className} />,
     description: "Providing exceptional customer assistance and resolving inquiries efficiently",
-  },
-  {
-    name: "Technical Analysis",
-    icon: ({ className }) => <ShieldCheck className={className} />,
-    description: "Analyzing technical requirements and providing optimal solutions",
-  },
-  {
-    name: "Technical Support",
-    icon: ({ className }) => <Server className={className} />,
-    description: "Troubleshooting and resolving complex technical issues",
   },
   {
     name: "Customer Handling",
@@ -32,19 +27,19 @@ const skills: Skill[] = [
     description: "Managing client relationships and ensuring high satisfaction levels",
   },
   {
-    name: "DevOps",
-    icon: ({ className }) => <Network className={className} />,
-    description: "Implementing CI/CD pipelines and managing infrastructure",
+    name: "Projects Lead",
+    icon: ({ className }) => <MessageCircle className={className} />,
+    description: "Leading teams and managing projects from conception to completion",
+  },
+  {
+    name: "Technical Support",
+    icon: ({ className }) => <Server className={className} />,
+    description: "Troubleshooting and resolving complex technical issues",
   },
   {
     name: "Networking",
-    icon: ({ className }) => <Server className={className} />,
+    icon: ({ className }) => <ShieldCheck className={className} />,
     description: "Designing and maintaining network infrastructure and security",
-  },
-  {
-    name: "ISP Management",
-    icon: ({ className }) => <MessageCircle className={className} />,
-    description: "Providing internet service solutions and managing connectivity",
   },
 ];
 
@@ -82,7 +77,7 @@ const Skills: React.FC<SkillProps> = ({ className }) => {
           </AnimatedSection>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {skills.map((skill, index) => (
             <SkillCard key={skill.name} skill={skill} index={index} />
           ))}
