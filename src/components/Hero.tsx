@@ -103,7 +103,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             )}
           >
             <img 
-              src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+              src="https://github.com/rajanchand/rajanthakuri.io/blob/ef885bd609bf499569919042681c3a2e58c81a70/public/UWS%20FEST%20(150).jpg"
               alt="Rajan Prakash Chand"
               className="w-full h-full object-cover"
               style={{ 
