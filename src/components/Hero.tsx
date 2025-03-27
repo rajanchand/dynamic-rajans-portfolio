@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
@@ -18,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
     
     // Preload the profile image
     const img = new Image();
-    img.src = "rajan.jpg";
+    img.src = "/rajan.jpg"; // Ensure the image is in the public directory
     img.onload = () => setImageLoaded(true);
   }, []);
 
@@ -77,7 +76,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
               
               <a 
                 href="/resume.pdf" 
-                className="px-6 py-3 bg-white dark:bg-gray-800 text-techdarker dark:text-white rounded-full font-medium border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-sm flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-white dark:bg-gray-800 text-techdarker dark:text-white rounded-full font-medium border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover[...]
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -103,7 +102,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             )}
           >
             <img 
-              src="rajan.png"
+              src="/rajan.jpg" // Updated to reference the image in the public directory
               alt="Rajan Prakash Chand"
               className="w-full h-full object-cover"
               style={{ 
@@ -121,7 +120,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
       
       <a 
         href="#experience" 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-3 shadow-md hover:shadow-lg transition-all hover:bg-white dark:hover:bg-gray-800 animate-bounce"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-3 shadow-md hover:shadow-lg transition-all hover:bg-white[...]
         aria-label="Scroll to Experience"
       >
         <ArrowDown size={20} className="text-techaccent" />
