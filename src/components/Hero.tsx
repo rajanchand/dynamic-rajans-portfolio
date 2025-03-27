@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
     
     // Preload the profile image
     const img = new Image();
-    img.src = "/rajan1.jpg"; // Ensure the image is in the public directory
+    img.src = "/public/rajan1.jpg"; // Ensure the image is in the public directory
     img.onload = () => setImageLoaded(true);
   }, []);
 
@@ -102,7 +102,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             )}
           >
             <img 
-              src="/rajan1.jpg" // Updated to reference the image in the public directory
+              src="/public/rajan1.jpg" // Updated to reference the image in the public directory
               alt="Rajan Prakash Chand"
               className="w-full h-full object-cover"
               style={{ 
