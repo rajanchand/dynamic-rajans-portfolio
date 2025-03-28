@@ -15,22 +15,22 @@ interface ExperienceItem {
 
 const experienceItems: ExperienceItem[] = [
   {
-    position: "Senior Software Engineer",
-    company: "Kalash Services",
-    location: "New Delhi, India",
-    period: "2020 - Present",
-    description: "Leading development of enterprise applications and mentoring junior developers.",
+    position: "Customer Support Supervsior",
+    company: "Dish Media Network Ltd",
+    location: "Kathmandu, Nepal",
+    period: "2022 - 2024",
+    description: "Effective networking fosters trust, collaboration, and personal development, benefiting both individuals and organizations.",
     highlights: [
-      "Spearheaded the development of a client management system that increased efficiency by 35%",
-      "Implemented CI/CD pipelines resulting in 40% faster deployment cycles",
-      "Optimized database performance reducing query times by 60%"
+      "Designing, implementing, and providing standard support and escalation process, document, and protocol for technical issue handling & and resolution.",
+      "Develop and maintain diagnostic and troubleshooting mechanisms for escalation issues according to a structured protocol.",
+      "Active participation in technical project implementation within the ISP, involving the team in monitoring progress, and conducting essential pilot projects as per the ISP's needs."
     ]
   },
   {
-    position: "Software Developer",
-    company: "Worldlink Communication",
-    location: "Mumbai, India",
-    period: "2018 - 2020",
+    position: "Technical Supervisor",
+    company: "Worldlink Communication Ltd",
+    location: "Kathmandu, Nepal",
+    period: "2019 - 2022",
     description: "Developed full-stack web applications using modern JavaScript frameworks and RESTful APIs.",
     highlights: [
       "Created responsive web interfaces for multiple high-traffic websites",
