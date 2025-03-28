@@ -30,8 +30,8 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
       { name: "Blog", url: "https://blog.example.com" },
     ],
     "Membership": [
-      { name: "IEEE", url: "https://www.ieee.org/" },
-      { name: "ACM", url: "https://www.acm.org/" },
+      { name: "RAN", url: "https://www.ran.org.np/" },
+      { name: "CSIT", url: "https://csitan.org.np/" },
       { name: "Kaggle", url: "https://www.kaggle.com/" },
       { name: "GitHub", url: "https://github.com/rajanprakashchand" },
     ]
@@ -44,11 +44,11 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           <div>
             <h2 className="text-2xl font-medium mb-4">Rajan<span className="text-techaccent">.</span></h2>
             <p className="mb-6 text-gray-300 dark:text-gray-400">
-              A software engineer driven by curiosity and desire to push the boundaries of what is possible with technology.
+              A Network engineer driven by curiosity and desire to push the boundaries of what is possible with technology.
             </p>
             <SocialLinks iconSize={22} className="mb-5" />
             <div className="text-sm text-gray-400 dark:text-gray-500">
-              Glasgow,Uk
+              Glasgow, UK
             </div>
           </div>
           
